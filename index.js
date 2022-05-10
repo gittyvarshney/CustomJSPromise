@@ -125,7 +125,7 @@ class MyPromise {
             })
 
             this.#catchCbs.push((result) => {
-                if(catchCb === null){
+                if(!catchCb){
                     reject(result)
                     return;
                 }
